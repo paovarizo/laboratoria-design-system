@@ -1,0 +1,26 @@
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+import { DefaultTemplate } from "./Button.templates.js";
+import Button from "./Button";
+
+export const VISIBLE_CONTROLS = ["variant"];
+
+<Meta
+  title="Components/Button"
+  component={Button}
+  args={{
+    variant: "success",
+  }}
+  parameters={{
+    controls: { include: VISIBLE_CONTROLS },
+  }}
+  argTypes={{
+    variant: {
+      control: { type: "select" },
+      options: ["success", "error"],
+    },
+  }}
+/>
+
+<Canvas>
+  <Story name="Color">{DefaultTemplate.bind({})}</Story>
+</Canvas>
