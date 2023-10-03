@@ -18,7 +18,7 @@ function getPackageDir(filepath) {
 }
 
 module.exports = {
-  stories: ["../src/**/*.stories.@(js|mdx)"],
+  stories: ["../src/components/**/*.stories.@(js|mdx)"],
   addons: [
     "@storybook/addon-links",
     {
