@@ -49,6 +49,8 @@
     "@storybook/react": "^6.5.10",
     "@storybook/testing-library": "^0.0.13",
     "@types/storybook__react": "^5.2.1",
-    "@types/webpack-env": "^1.18.2"
+    "@types/webpack-env": "^1.18.2",
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0"
   }
 }

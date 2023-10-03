@@ -58,6 +58,13 @@ module.exports = {
         use: ["@svgr/webpack", "url-loader"],
       },
     ];
+
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      "@emotion/core": getPackageDir("@emotion/react"),
+      "@emotion/styled": getPackageDir("@emotion/styled"),
+      "emotion-theming": getPackageDir("@emotion/react"),
+    };
     return config;
   },
 };
