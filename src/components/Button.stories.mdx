@@ -8,13 +8,13 @@ export const VISIBLE_CONTROLS = ["color"];
   title="Components/Button"
   component={Button}
   args={{
-    color: "pink",
+    color: "green",
   }}
   parameters={{
     controls: { include: VISIBLE_CONTROLS },
   }}
   argTypes={{
-    theme: {
+    color: {
       control: { type: "select" },
       options: ["gray", "blue", "green"],
     },
