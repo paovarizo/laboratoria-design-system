@@ -5,34 +5,47 @@ export interface ButtonCustomProps
     ButtonHTMLAttributes<HTMLButtonElement>,
     HTMLButtonElement
   > {
-  variant?: "success" | "error";
+  /**
+   * Set the variant for the button.
+   * @default 'M'
+   */
+  variant?: "register" | "login";
 }
 
-const ButtonSuccess = styled("button", {
+const ButtonRegister = styled("button", {
   slot: "Root",
   overridesResolver: (_, styles) => [styles.root],
 })<ButtonCustomProps>(() => ({
-  border: "1px solid green",
-  background: "#ABEBC6",
+  border: "none",
+  background: "#6C3483",
   padding: "10px",
-  color: "green",
+  color: "white",
   borderRadius: "5px",
 }));
-const ButtonError = styled("button", {
+const ButtonLogin = styled("button", {
   slot: "Root",
   overridesResolver: (_, styles) => [styles.root],
 })<ButtonCustomProps>(() => ({
-  border: "1px solid #78281F",
-  background: "#F1948A",
+  border: "1px solid #6C3483",
+  background: "white",
   padding: "10px",
-  color: "#78281F",
+  color: "#6C3483",
   borderRadius: "5px",
 }));
 
 export default (props: ButtonCustomProps) => {
-  return props.variant === "success" ? (
-    <ButtonSuccess {...props} />
-  ) : (
-    <ButtonError {...props} />
-  );
+  switch (props.variant) {
+    case "register": {
+      return <ButtonRegister {...props} />;
+      break;
+    }
+    case "login": {
+      return <ButtonLogin {...props} />;
+      break;
+    }
+    default: {
+      console.log("Invalid choice");
+      break;
+    }
+  }
 };

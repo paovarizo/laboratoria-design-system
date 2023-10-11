@@ -3,12 +3,13 @@ import { DefaultTemplate } from "./Button.templates.js";
 import Button from "./Button";
 
 export const VISIBLE_CONTROLS = ["variant"];
+export const VISIBLE_PROPS = ["variant"];
 
 <Meta
   title="Components/Button"
   component={Button}
   args={{
-    variant: "success",
+    variant: "register",
   }}
   parameters={{
     controls: { include: VISIBLE_CONTROLS },
@@ -16,10 +17,14 @@ export const VISIBLE_CONTROLS = ["variant"];
   argTypes={{
     variant: {
       control: { type: "select" },
-      options: ["success", "error"],
+      options: ["register", "login"],
     },
   }}
 />
+
+# Button
+
+Weave buttons trigger actions or changes within the interface. They come in a number of varieties.
 
 <Canvas>
   <Story name="Color">{DefaultTemplate.bind({})}</Story>
