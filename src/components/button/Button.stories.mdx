@@ -1,9 +1,8 @@
-import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
 import { DefaultTemplate } from "./Button.templates.js";
 import Button from "./Button";
 
 export const VISIBLE_CONTROLS = ["variant"];
-export const VISIBLE_PROPS = ["variant"];
 
 <Meta
   title="Components/Button"
@@ -24,7 +23,7 @@ export const VISIBLE_PROPS = ["variant"];
 
 # Button
 
-Weave buttons trigger actions or changes within the interface. They come in a number of varieties.
+Buttons trigger actions or changes within the interface. They come in a number of varieties.
 
 <Canvas>
   <Story name="Color">{DefaultTemplate.bind({})}</Story>
