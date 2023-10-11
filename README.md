@@ -15,3 +15,7 @@ Tener mínimo la version `18.0.0` de `node`.
 **Levantar Storybook**
 
 `yarn storybook`
+
+# Ejercicio
+
+Agregar una la variante 'warning' para el botón y hacer que se vea en el storybook
