@@ -18,4 +18,4 @@ Tener mínimo la version `18.0.0` de `node`.
 
 # Ejercicio
 
-Agregar una la variante 'warning' para el botón y hacer que se vea en el storybook
+Agregar una la variante `logout` para el botón y hacer que se vea en el storybook
